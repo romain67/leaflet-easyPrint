@@ -1,8 +1,6 @@
 ## leaflet-easyPrint
 
-A simple [leaflet](http://www.leafletjs.com) plugin which adds an icon to print the map.
-
-Check out the [demo](http://rowanwins.github.com/leaflet-easyPrint/).
+A simple [leaflet.js](http://www.leafletjs.com) plugin which allows users to print the map to an A4 page (landscape or portrait). Check out the [demo](http://rowanwins.github.com/leaflet-easyPrint/).
 
 ### Usage
 **Step 1.** Include the required js and css files in your document. 
@@ -25,14 +23,15 @@ You can pass a number of options to the plugin to control various settings.
 | ------------- |--------------|--------------|---------------|
 | title | string | 'Print map' | Sets the text which appears as the tooltip of the print button |
 | position | [Leaflet control position](http://leafletjs.com/reference.html#control-positions) | 'topleft' | Position the print button |
-| elementsToHide | string | none | Enables you to pass through a string of html elements to hide when the user prints the page |
+| A4Portrait | boolean | true | Displays a portrait button |
+| A4Landscape | boolean | true | Displays a landscape button |
 
 Here's an example of passing through some options.
 ``` js
 L.easyPrint({
 	title: 'My awesome print button',
 	position: 'bottomright',
-	elementsToHide: 'p, h2'
+	A4Portrait: false
 }).addTo(map);
 ```
 
